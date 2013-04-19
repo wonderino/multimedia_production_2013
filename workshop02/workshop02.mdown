@@ -1,0 +1,164 @@
+비주얼라이제이션 2012. 프로세싱 워크샵 (2)
+=================================
+
+원인호 wonderino쥐메일
+
+## 문자를 화면에
+
+- PFont를 사용한다.
+1. PFont 선언
+2. createFont 나 loadFont 
+3. textFon(폰트변수, 크기)
+4. text(텍스트, 위치)
+
+
+## 그림을 화면에
+### PImage : 비트맵 (bmp, jpg, png...)
+
+1. PImage 선언
+2. loadImage(파일이름)
+3. image(이미지변수, 위치, 사이즈)
+4. (옵션) 필터, 마스크 등 적용..
+5. (옵션) 픽셀값 불러오기
+
+
+### PShape : 벡터 (svg)
+
+1. PShape 선언
+2. loadShape(파일이름)
+3. shape(쉐이프변수, 위치, 사이즈)
+4. (옵션) 자체 회전, 크기변환 등등.
+5. (옵션) 구성요소 접근 child
+
+
+
+## 옮기고.돌리고.키우자 Matrix
+- 선형대수...
+- 쉽게 공간을 새롭게 정의한다.(좌표계를 옮긴다.) = pushMatrix
+
+- rotate/translate/scale
+rotate(PI)
+traslate(10, 20)
+scale(1.5, 2.5)
+
+- popMatrix :이전 공간으로 돌아간다. 
+
+- 행성계를 그려보아요.
+
+
+---
+
+## 과정을 요약한다 - 함수
+
+- function, method, procedure ...
+
+- {나오는 값 형태} 이름 {인자들...} ...
+
+`int add(int left, int right) {return left+right}`
+
+- 그렇다면 void setup() / void draw ...은??
+
+---
+
+## 데이터 + 함수 == 클래스 (OOP)
+
+- 내가 테이블을 여러개 관리해야한다면??? 
+
+- 데이터 추상화 => 변수 +  과정의 추상화 => 함수  = 객체
+
+1. 클래스를 만든다. (어떤 데이터? 어떤 함수를 하나로 묶지?) : 객체의 구조
+
+ - 이름을 만든다. 
+ 
+ `class Table`
+ - 소속 변수를 선언한다. 
+ 
+ `int[][] matrix; int rows; int cols;`
+ 
+ - 소속 함수를 선언한다. 
+ 
+ `int[][] loadCsv(String filename){} int drawTable(){}`
+ 
+ - 생성자를 선언한다.
+ `Table(String filename){}`
+ 
+ - **즉 Member Data(Attributes), Member Functions(Methods)**를 만든다.
+ 
+ 
+2. 클래스를 불러온다. == 클래스의 인스턴스, 객체
+
+ - new !!! == 메모리에 할당한다.
+  `Table table = new Table('example.csv');`
+  
+ - 생성자를 사용하면 된다!, 아니면 생성을 하게 하는 함수를 만든다.
+ 
+ - 클래스의 변수와 함수에 접근 == .
+  `table.matrix ; table.drawTable() ; ...
+
+  
+3. (옵션) static ....
+ - 인스턴스를 안만드는 클래스, 인스턴스 없이 불러올 수 있는 함수..
+ - 아까본 PFont.list() 함수가 이상하지 않았나? 
+ 
+  
+---
+
+## 남이 만들어 놓은 것.. Library
+
+- 알고보면 프로세싱도 라이브러리일뿐.
+- 클래스를 여러개 묶어 놓는다면!!!
+- [여기](http://processing.org/reference/libraries/) 가며 다 있음.
+
+
+### ControlP5
+
+1. 설치
+
+2. 수입하기 import
+
+3. 클래스 불러오기!(아까 배웠음)
+
+
+
+### gicentre
+- 시각화 등등을 위한!!
+- 모든 예제를 볼것!!
+
+
+## 참고자료
+
+### [generativedesign](http://www.generative-gestaltung.de/code)
+- 프로그래밍을 활용한 디자인
+
+### [Visualizing Data](http://processing.org/learning/books/)
+- Processing 개발자 Ben Fry가 지은 시각화 방법론.
+
+### [Processing.js](http://processingjs.org/)
+
+### [d3.js](http://d3js.org/)
+
+### [visual.ly](http://visual.ly/)
+
+### [GE vis](http://visualization.geblogs.com/)
+
+### [Guardian Data Store](http://www.guardian.co.uk/data)
+
+### [blprnt](http://blog.blprnt.com/selected-works)
+
+### [IBM many eyes](http://www-958.ibm.com/software/data/cognos/manyeyes/)
+
+### [Autodesk research](http://www.autodeskresearch.com/projects/visualization)
+
+### [visualizing.org](http://www.visualizing.org/)
+
+### [nytimes](http://www.nytimes.com/pages/politics/index.html?hp)
+
+### [periscopic](http://www.periscopic.com/)
+
+### [pitch interactive](http://www.pitchinteractive.com/beta/index.php)
+
+
+
+
+  
+  

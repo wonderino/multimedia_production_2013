@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>프로세싱 소개</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>멀티미디어발상연습 2013. 프로세싱 워크샵 (1)</h1>
+
+<p>원인호 <a href="mailto:wonderino@gmail.com">wonderino쥐메일</a></p>
+
+<p><a href="https://github.com/wonderino/multimedia_production_2013">수업용 깃허브</a></p>
+
+<hr />
+
+<h2>프로세싱 소개</h2>
+
+<ul>
+<li><a href="http://processing.org">processing.org</a>
+
+<ol>
+<li> JAVA 언어를 이용한 라이브러리 + IDE</li>
+<li> Javascript도 제공 <a href="http://processingjs.org">processingjs.org</a></li>
+</ol>
+</li>
+</ul>
+
+
+<hr />
+
+<h2>가져다 쓰기</h2>
+
+<h4>Hello Wolrd</h4>
+
+<ol>
+<li> <code>println ("Hello World");</code></li>
+<li>  줄바꿀때는 항상 <code>;</code></li>
+<li> <code>"좌" + "우"</code></li>
+</ol>
+
+
+<h4>프로세싱 이모저모</h4>
+
+<ul>
+<li><p>point/line/rect/ellipse/triangle/arc/quad/curve...</p>
+
+<ol>
+<li>FUNCTION (x, y, z, a, b....);
+
+<ul>
+<li><code>point(10, 10);  //점(x,y)</code></li>
+<li><code>line(10, 10, 50, 50); // 직선(시작x, 시작y, 끝x, 끝y)</code></li>
+<li><code>rect(20, 20, 50, 50);  //네모(좌측상단x, 좌측상단y, 넓이, 높이)</code></li>
+<li><code>ellipse(20,20,100,100);  //타원(중심x, 중심y, 넓이, 높이)</code></li>
+</ul>
+</li>
+<li>나머지는 여기서 -> <a href="http://processing.org/reference/">processing refrence</a></li>
+</ol>
+</li>
+<li><p>위치 : cartesian coordinate</p>
+
+<p> <img src="./img/coordinates.gif" alt="프로세싱의 좌표계" /></p></li>
+<li><p>색상 : fill, stroke</p>
+
+<ol>
+<li>RGBA</li>
+<li><p>0~255(검정->흰) : 256단계 // 8비트</p>
+
+<p> <img src="./img/color_cube.gif" alt="Color Cube" /></p></li>
+</ol>
+</li>
+<li><p>내 마음대로 그리기:</p>
+
+<ol>
+<li>자유도형 <a href="http://processing.org/reference/beginShape_.html">beginShape/vertex/endShape</a></li>
+<li>곡선 그리기 <a href="http://processing.org/reference/bezier_.html">bezier</a>, <a href="http://processing.org/reference/curve_.html">curve</a></li>
+</ol>
+</li>
+<li><p>배경: size/background</p>
+
+<ul>
+<li><code>size(400, 300); //캔버스의 크기</code></li>
+<li><code>background(255); //캔버스의 배경색</code></li>
+</ul>
+</li>
+<li><p>주석</p>
+
+<ul>
+<li><p><code>// 왜 안 돌아가지?</code></p></li>
+<li><p><code>/* 난 누군가.</code></p>
+
+<p>  <code>또 여긴 어딘가. */</code></p></li>
+</ul>
+</li>
+<li><p>움직여라</p>
+
+<ol>
+<li><p>setup/draw</p>
+
+<ul>
+<li><code>void setup() { size(400,300);} //실행하면 한번만 실행될 코드</code></li>
+<li><code>void draw() { println(millis()); rect(100,100, 200, 100);} //실행하면 계속해서 실행될 코드</code></li>
+</ul>
+</li>
+<li><p>frameRate/frameCount (<a href="http://ko.wikipedia.org/wiki/%ED%94%84%EB%A0%88%EC%9E%84_%EB%A0%88%EC%9D%B4%ED%8A%B8">프레임레이트 란?</a>)</p>
+
+<ul>
+<li><code>frameRate(60); // 초당 draw함수를 몇번 실행시킬까.</code></li>
+<li><code>println(frameCount) //지금 몇 프레임 지났냐</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>더 움직여보자</p>
+
+<ol>
+<li><p> key(Pressed/Released/Typed)</p>
+
+<ul>
+<li><code>void keyPressed(){println(key);}</code></li>
+<li>key</li>
+</ul>
+</li>
+<li><p> mouse(Pressed/Clicked/Moved/Released/Dragged)</p>
+
+<ul>
+<li><code>void mousePressed(){background(random(0,255));}</code></li>
+<li>mouseX, mouseY, pmouseX, pmouseY</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>임의의 수 : random</p></li>
+</ul>
+
+
+<hr />
+
+<h2>이걸 어디 좀 넣어 둬야 하는데 : 변수(variable)</h2>
+
+<h4>변수의 선언과 명명규칙</h4>
+
+<ol>
+<li><p>변수란? 그럼 안변수는?</p></li>
+<li><p>변수와 상수 : 바꿀수 있거나 없거나</p></li>
+<li><p>선언과 초기화</p>
+
+<p> <code>int number;</code></p>
+
+<p> <code>number = 10;</code></p>
+
+<p> <code>int next_number = 10;</code></p></li>
+<li><p>대소문자 구분/예약어 주의/문자로 시작/특수문자는 -,$ 만</p></li>
+</ol>
+
+
+<h4>변수의 타입 : 기본형/논리형/문자형/정수형/실수형</h4>
+
+<pre><code>- boolean : true/false
+- char : 'a'
+- bype : -128~127
+- short : -32768 ~ 32767
+- int : -2147483648 ~ 2147483647
+- float : 1.4E-45 ~ 3.4028235E38
+    `float pi = 3.14;`
+- long/duble
+</code></pre>
+
+<p> <strong> 모르겠으면 '정수는 int' '실수는 float'이구나 정도...</strong></p>
+
+<h4>형변환 Casting</h4>
+
+<p> <code>float f = 100.0;</code></p>
+
+<p> <code>int i = 10 + (int)f;</code></p>
+
+<p> <code>float a = 10.0 + i;</code></p>
+
+<p> ** 작은 형에서 큰 형으로 변환은 생략해도 좋다.</p>
+
+<h4>여러문자 String(앞이 대문자!)</h4>
+
+<p> <code>String deostroy = "파." + "괘." + "한." + "다.";</code></p>
+
+<h4>변수의 영역 : {...}를 기준으로 한다.</h4>
+
+<pre><code>- Global 전역변수 : 아무곳에서나 접근 가능하다.
+- Local 지역변수 : {}안에서만 기억된다.
+</code></pre>
+
+<h5>예약어 : 이미 정의되어있으므로 사용 말자(<a href="http://forum.processing.org/topic/reserved-keywords-wiki-page">목록</a>)</h5>
+
+<hr />
+
+<h2>산수 : 연산자</h2>
+
+<ul>
+<li>단항연산자 : ++ -- + - ~ ! (타입)</li>
+<li>산술연산자 :  * / % _ - &lt;&lt; >> >>></li>
+<li>비교연산자 : > &lt; &lt;= >= instanceof == !=</li>
+<li>논리연산자 : % ^ | &amp;&amp; ||</li>
+<li>삼항연산자 : ?:</li>
+<li><p>대입연산자 : = *= /= %= += -= ........</p></li>
+<li><p>우선순위가 있다. 모르면 괄호쳐라.</p></li>
+<li>형변환!!</li>
+<li><p>단항과 대입은 왼쪽으로 진행</p>
+
+<p> <code>int a = 10;</code></p>
+
+<p> <code>color c = color(255,125,45);</code></p>
+
+<p> <code>a += 10;</code></p>
+
+<p> <code>a++;</code></p></li>
+<li><p>나머지 연산자(%)를 잘 사용하자.
+ <code>background(frameCount%255);</code></p></li>
+</ul>
+
+
+<hr />
+
+<h2>이리가거라 저리가거라 : 조건문</h2>
+
+<h4>if , switch</h4>
+
+<pre><code>if(조건식) {뭐라도 좀 해보지;}
+else if(다음 조건식) {그렇다면 이거라도;}
+else {모르겠다;}
+</code></pre>
+
+<ol>
+<li>조건식 == 결과가 boolean 값 (>&lt;== 이런 연산을 쓰면될걸)</li>
+<li>중첩이 가능</li>
+<li><a href="http://processing.org/reference/switch.html">switch</a>는 시간 관계상...</li>
+</ol>
+
+
+<hr />
+
+<h2>갈때까지 가봐라 : 반복문</h2>
+
+<ol>
+<li><p>while : 조건문이 true이면 계속하거라;</p>
+
+<p> while(조건문) {...;}</p>
+
+<p> <code>int a = 10;</code></p>
+
+<p> <code>while(a&gt;0) {point(a* width/11, height/2); a--}</code></p></li>
+<li><p>for : 초기화-> 조건식 -> 뭔가 한다 -> 증감식</p>
+
+<p> for(초기화;조건식;증감식){...;}</p>
+
+<p> <code>for (int i=10; i &gt; 0; i--) {point(i* width/11, height/2);}</code></p></li>
+<li><p>탈출!!! break와 continue</p></li>
+<li><p>이중루프</p></li>
+</ol>
+
+
+<p><code>for(int i=0 ; i &lt; 10 ; i++){
+    for(int j=0; j &lt; 10 ; j++){
+    println("i: "+ i + " j: "+ j);  
+ }
+}</code></p>
+
+<hr />
+
+<h2>여러값을 차곡차곡 : 배열</h2>
+
+<pre><code>`int[] score = new int[5];`
+`int[] score = {10,20,30,40};`
+</code></pre>
+
+<ol>
+<li>0부터 시작한다.......</li>
+<li>개수를 알려주자</li>
+<li><p>반복문을 활용하자.</p>
+
+<p> <code>for(int i=0; i &lt; score.length; i++) {println(score[i]);}</code></p></li>
+<li><p>new가 뭐지????</p></li>
+<li><p>내 마음속의 표그리기 : 다차원 배열 [행][열] = [가로][세로]</p>
+
+<p> <code>int[][] score = new int[5][3]; // 5*3 행렬</code></p>
+
+<p> <strong> po이중루프!!wer를 활용한다면!!!!</strong></p></li>
+</ol>
+
+
+<hr />
+
+<h2>블랙박스 만들기 : 함수</h2>
+
+<pre><code>`int add(int a, int b) { return a+b }'
+</code></pre>
+
+<ol>
+<li>return 값의 타입 명시</li>
+<li><p>내놓을것이 없다면 void</p>
+
+<p> <code>void myRect(int x, int, y, int w, int h){…}</code></p></li>
+<li><p>앞에 배운걸 다 여기 넣으면 됨.</p></li>
+<li>변수의 범위를 주의 할 것!!</li>
+</ol>
+
+
+<hr />
+
+<h2>텍스트 자료 불러오기/내보내기</h2>
+
+<ul>
+<li><p>부른다. <a href="http://processing.org/reference/loadStrings_.html">loadStrings</a></p></li>
+<li><p>찢는다. <a href="http://processing.org/reference/split_.html">split</a></p></li>
+<li><p>내보낸다. <a href="http://processing.org/reference/saveStrings_.html">saveStrings</a></p></li>
+<li><p>엑셀을 어떻게 읽을까?</p>
+
+<ol>
+<li> csv를 활용한다면</li>
+<li> 이걸 이중배열에 집어 넣는다면!!</li>
+<li> 주의사항은 숫자도 String !! 따라서 형변환</li>
+</ol>
+</li>
+</ul>
+
+
+<hr />
+
+<h2>간단한 바그래프 만들어보기</h2>
+
+<hr />
+
+<h2>산포도 그려보기</h2>
+
+<p> (<a href="http://en.wikipedia.org/wiki/Scatter_plot">scatter_plot</a>)</p>
+
+<hr />
+
+<h2>시계 + 파이차트</h2>
+
+<hr />
+</body>
+</html>
